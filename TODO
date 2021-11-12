@@ -1,0 +1,19 @@
+django websockets react
+https://medium.com/@abhi.sharm.414/live-whiteboard-with-django-react-and-websockets-7cae864ed6c5
+
+need rust compiler for django channels
+
+could use this: https://www.npmjs.com/package/react-use-websocket
+
+
+and this:
+https://python-socketio.readthedocs.io/en/latest/server.html
+
+
+
+
+------
+
+
+Finish HelpQueueManager.js, login and list/delete.
+WebSocket in react frontend.

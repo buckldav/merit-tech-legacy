@@ -7,16 +7,23 @@ import Dashboard from "./components/courses/course/Dashboard";
 import About from "./components/courses/course/About";
 import CourseLinks from "./components/courses/course/CourseLinks";
 import Projects from "./components/projects/Projects";
-import Games from './components/projects/Games';
-import Sites from './components/projects/Sites';
-import Apps from './components/projects/Apps';
+import Games from "./components/projects/Games";
+import Sites from "./components/projects/Sites";
+import Apps from "./components/projects/Apps";
+import HelpQueue from "./components/help-queue/HelpQueue";
+import HelpQueueDetail from "./components/help-queue/HelpQueueDetail";
+import HelpQueueManager from "./components/help-queue/HelpQueueManager";
 
 const BaseRouter = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/courses" component={Courses} />
-      <Route path="/courses/:course"
+      <Route exact path="/help-queue" component={HelpQueue} />
+      <Route exact path="/help-queue/:id" component={HelpQueueDetail} />
+      <Route exact path="/help-queue-manager" component={HelpQueueManager} />
+      <Route
+        path="/courses/:course"
         render={({ match: { url } }) => (
           <Course>
             <Switch>
@@ -27,7 +34,8 @@ const BaseRouter = () => {
           </Course>
         )}
       />
-      <Route path="/projects"
+      <Route
+        path="/projects"
         render={({ match: { url } }) => (
           <Projects>
             <Switch>
